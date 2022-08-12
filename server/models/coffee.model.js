@@ -27,8 +27,13 @@ Coffee.findByIngredient = async function (ingredient) {
 };
 
 Coffee.beforeValidate((coffee) => {
-  if (!coffee.ingredients.includes("love")) {
-    coffee.ingredients.push("love");
+  if(coffee.ingredients){
+    if(!coffee.ingredients.includes("love")) {
+      coffee.ingredients.push("love");
+    }
+  }
+  else {
+    coffee.ingredients = ['love'];
   }
 });
 

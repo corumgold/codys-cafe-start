@@ -1,8 +1,15 @@
 const router = require('express').Router()
-const {Pug} = require('../models')
+const {Pug, Coffee} = require('../models')
 
-// Your code here!
-// Remember that these routes are already mounted on
-// /api/pugs!
+router.get('/', async (req,res)=>{
+    const pugs = await Pug.findAll();
+    res.send(pugs);
+})
+
+router.get('/favoriteCoffee/:favoriteCoffeeName', async (req, res) =>{
+    
+})
+
+
 
 module.exports = router

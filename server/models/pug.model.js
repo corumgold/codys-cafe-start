@@ -16,4 +16,19 @@ const Pug = db.define('pug', {
   }
 })
 
+Pug.findByCoffee = async function(coffeeName) {
+  const pugs = await this.findAll({
+    include: {
+      model: Coffee,
+      as: 'favoriteCoffee',
+      where: {
+        name: coffeeName
+      }
+    }
+  })
+  console.log(pugs)
+  return pugs;
+}
+
 module.exports = Pug
+  

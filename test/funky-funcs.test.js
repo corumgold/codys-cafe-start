@@ -13,7 +13,7 @@ describe('Funky functions', () => {
   // intersection
   // Creates an array of unique values that are included in the two given arrays.
   // Based on: https://lodash.com/docs/4.17.5#intersection
-  xdescribe('intersection', () => {
+  describe('intersection', () => {
     it('returns an array', () => {
       expect(intersection([], [])).to.be.an('array')
     })
@@ -56,7 +56,7 @@ describe('Funky functions', () => {
       expect(intersection(arr1, arr2)).to.deep.equal(['b', 'c'])
     })
 
-    xit('EXTRA CREDIT: works for any number of arrays', () => {
+    it('EXTRA CREDIT: works for any number of arrays', () => {
       const arr1 = [1, 2, 3, 7]
       const arr2 = [1, 4, 5, 2]
       const arr3 = [2, 1, 1, 9]
