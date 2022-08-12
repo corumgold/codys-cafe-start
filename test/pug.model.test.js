@@ -6,7 +6,7 @@ const {db, Pug, Coffee} = require('../server/models')
 describe('Pug model', () => {
   beforeEach(() => db.sync({force: true}))
 
-  describe.only('column definitions and validations', () => {
+  describe('column definitions and validations', () => {
     it('has a `name`, `age`, and `biography`', async () => {
       const pug = await Pug.create({
         name: 'Cody',
