@@ -26,7 +26,6 @@ Pug.findByCoffee = async function(coffeeName) {
       }
     }
   })
-  console.log(pugs)
   return pugs;
 }
 

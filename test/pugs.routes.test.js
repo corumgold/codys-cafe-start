@@ -37,7 +37,7 @@ describe('Routes', () => {
       })
     })
 
-    describe.only('GET /pugs/favoriteCoffee/:favoriteCoffeeName', () => {
+    describe('GET /pugs/favoriteCoffee/:favoriteCoffeeName', () => {
       // Be careful about the order in which you register your routes!
       // Don't forget that Express evaluates them in the order in which they're defined!
       it('sends all pugs based on the specified favorite coffe name', async () => {
