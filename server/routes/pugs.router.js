@@ -39,4 +39,13 @@ router.put("/:pugId", async (req, res) => {
   }
 });
 
+router.delete("/:pugId", async (req, res) => {
+  const pugId = req.params.pugId;
+  const pug = await Pug.findByPk(pugId);
+  if (pug) {
+    await pug.destroy();
+    res.status(204).send("Don't do it!!");
+  } else res.status(404).send("No pug :^)");
+});
+
 module.exports = router;
