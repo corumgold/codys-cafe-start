@@ -28,9 +28,35 @@ function flipArguments(func) {
   return func;
 }
 
-const invert = (obj) => {};
+const invert = (obj) => {
+  const keys = Object.values(obj);
+  const values = Object.keys(obj);
+  let index = 0;
+  return keys.reduce((acc, currKey) => {
+    acc[currKey] = values[index];
+    index++;
+    return acc;
+  }, {});
+};
 
-const camelCase = (str) => {};
+const camelCase = (str) => {
+  const specChar = " _";
+  let prevSpecChar = false;
+  return str.split("").reduce((acc, curr) => {
+    if (specChar.includes(curr)) {
+      prevSpecChar = true;
+    } else if (prevSpecChar && acc.length) {
+      acc += curr.toUpperCase();
+      prevSpecChar = false;
+    } else {
+      acc += curr.toLowerCase();
+      prevSpecChar = false;
+    }
+    return acc;
+  }, "");
+};
+
+camelCase("__hello_world_how_are_you");
 
 module.exports = {
   intersection,

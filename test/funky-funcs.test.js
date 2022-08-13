@@ -90,7 +90,7 @@ describe("Funky functions", () => {
     });
   }); // end: flattenDeep
 
-  describe.only("flipArguments", () => {
+  describe("flipArguments", () => {
     // flipArguments
     // Creates a function that invokes the input func with arguments reversed
     // Based on: https://lodash.com/docs/4.17.5#flip
@@ -116,7 +116,7 @@ describe("Funky functions", () => {
     });
   }); // end: flipArguments
 
-  xdescribe("invert", () => {
+  describe("invert", () => {
     // invert
     // Creates an object composed of the inverted keys and values of object.
     // If the input object contains duplicate values, subsequent values overwrite previous values
@@ -153,7 +153,7 @@ describe("Funky functions", () => {
     });
   }); // end: invert
 
-  xdescribe("camelCase", () => {
+  describe("camelCase", () => {
     // camelCase
     // converts input string to camelCase
     // Based on: https://lodash.com/docs/4.17.5#camelCase
